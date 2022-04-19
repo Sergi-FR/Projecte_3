@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+li{
+    list-style: none    ;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    height: 13vh;
+
+    background: url(../img/fondo.jpg) no-repeat ;
+}
+
+nav .menu-main{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px;
+
+}
+
+nav .opcions-main ul{
+    display: flex;
+}
+
+nav .opcions-main ul li:hover{
+    display: flex;
+
+    background-color: rgba(255, 255, 255, 0.745);
+}
+
+nav .opcions-main ul li{
+    padding: 15px;
+
+    background-color: rgba(255, 255, 255, 0.530);
+}
+
+nav .logo{
+    
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+
+}
+
+nav .logo img{
+    width: 9vh;
+    height: 8vh;;
+}
+
+.linia{
+    background-color: black;
+    height: 1vh;
+
+}
+
+.cursos-material{
+    border: 5px solid salmon;
+}
+
+.productes{
+    border: 10px solid rgb(172, 0, 0);
+}
+
+.carta-prod{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.carta-prod img{
+    max-width: 300px;
+    height: max-content;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.carta-prod button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
