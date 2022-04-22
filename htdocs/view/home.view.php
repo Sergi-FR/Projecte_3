@@ -41,7 +41,7 @@ session_start();
                     <li><a href="#">Alquilar</a></li>
                     <li><a href="#">Cursos</a></li>
                     <li><a href="#">Perfil</a></li>
-                    <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    <li><a href="../php/tancar.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -52,40 +52,40 @@ session_start();
     <main>
         <div class="linia"></div>
         <section>
-            <div class="temps">
-
-
-
-            </div>
-            <div class="cursos-material">
-                <div class="productes">
-                    <div class="carta-prod">
-                        <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                        <h1>Prova 1</h1>
-                        <p class="price">$19.99</p>
-                        <p>AwA</p>
-                        <p><button>Comprar</button></p>
+            <div class="top">
+                <div class="temps">
+                    <div class="titol">
+                        <h1>Temps </h1>
                     </div>
-                    <div class="carta-prod">
-                        <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                        <h1>Prova 1</h1>
-                        <p class="price">$19.99</p>
-                        <p>AwA</p>
-                        <p><button>Comprar</button></p>
+                    <p>A</p>
+                    <p>A</p>
+                </div>
+                <div class="material">
+                    <div class="titol">
+                        <h1>Cursos Populars</h1>
                     </div>
-                    <div class="carta-prod">
-                        <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                        <h1>Prova 1</h1>
-                        <p class="price">$19.99</p>
-                        <p>AwA</p>
-                        <p><button>Comprar</button></p>
-                    </div>
-                    <div class="carta-prod">
-                        <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                        <h1>Prova 1</h1>
-                        <p class="price">$19.99</p>
-                        <p>AwA</p>
-                        <p><button>Comprar</button></p>
+                    <div class="productes">
+                        <div class="carta-prod">
+                            <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                            <h1>Prova 1</h1>
+                            <p class="preu">$19.99</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><button>Alquilar</button></p>
+                        </div>
+                        <div class="carta-prod">
+                            <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                            <h1>Prova 1</h1>
+                            <p class="preu">$19.99</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><button>Alquilar</button></p>
+                        </div>
+                        <div class="carta-prod">
+                            <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                            <h1>Prova 1</h1>
+                            <p class="preu">$19.99</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><button>Alquilar</button></p>
+                        </div>
                     </div>
                 </div>
             </div>

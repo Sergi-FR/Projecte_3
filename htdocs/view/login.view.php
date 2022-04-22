@@ -41,13 +41,13 @@ Desar_session();
     ################################################# -->
     <main>
         <div class="login">
-            <form action="" method="post">
+            <form action="login.view.php" method="post">
                 <div class="login-content">
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="" placeholder="exemple@gmail.com">
+                    <input id="email" type="email" name="email" placeholder="exemple@gmail.com">
                     <label for="contra">Contrasenya</label>
-                    <input type="password" name="" id="contra">
-                    <button type="submit">Enviar</button>
+                    <input type="password" name="contra" id="contra">
+                    <button type="submit" >Enviar</button>
                     <p>Encara no estas donat d'alta? <a href="registre.view.php">Registrat!!!</a></p>
                 </div>
             </form>

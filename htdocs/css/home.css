@@ -65,29 +65,37 @@ nav .logo img{
 
 }
 
-.cursos-material{
-    border: 5px solid salmon;
+section{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.top{
+    
+    margin: 30px;
+    padding: 10px;
+
+}
+.top{
+    display: flex;
+    justify-content: space-between;
 }
 
 .productes{
-    border: 10px solid rgb(172, 0, 0);
+    display: flex;
+    margin: 20px 0;
 }
 
 .carta-prod{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
+    margin: 0 8px;
+    max-width: 250px;
     text-align: center;
 }
 
 .carta-prod img{
-    max-width: 300px;
+    max-width: 250px;
     height: max-content;
-}
-
-.price {
-    color: grey;
-    font-size: 22px;
 }
 
 .carta-prod button {
@@ -100,5 +108,11 @@ nav .logo img{
     cursor: pointer;
     width: 100%;
     font-size: 18px;
-  }
+}
+
+.preu {
+    color: grey;
+    font-size: 22px;
+}
+
   

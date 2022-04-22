@@ -3,7 +3,7 @@
 function con(){
     
     //Connexio a la BD
-    $connexio = new mysqli("localhost", "root", "", "");
+    $connexio = new mysqli("localhost", "root", "1234", "esqui");
 
     //Comprovasio de la connexio
     if($connexio->connect_errno){
@@ -16,40 +16,58 @@ function con(){
 
 function Desar_session(){
 
-    if(isset($_POST['contra']) && isset($_POST['usuari'])){
+    if(!empty($_POST['email']) && !empty($_POST['contra'])){
 
-        $usuari = "Usuari='".$_POST['usuari']."' ";
-        $contra = "Contrasenya=MD5('".$_POST['contra']."') ";
+        $email = "email='".$_POST['email']."' ";
+        $contra = "contrasenya=MD5('".$_POST['contra']."') ";
     
         //Consulta
-        $sql = "";
+        $sql ="SELECT * from clients where $email and $contra";
     
         $result = con()->query($sql);
     
         $message = '';
     
         if($result->num_rows > 0){
+            
             while($row = $result->fetch_assoc()){
-                $_SESSION['usuari'] = $row['Usuari'];
-                $_SESSION['DNI'] = $row['DNI_Client'];
-                $_SESSION['Nom'] = $row['Nom'];
-                $_SESSION['Cognom'] = $row['Cognom'];
-                $_SESSION['Data'] = $row['Data_naixement'];
-                $_SESSION['Tele'] = $row['Tel'];
-                $_SESSION['Correu'] = $row['Correu_e'];
-                $_SESSION['Sexe'] = $row['Sexe'];
-                $_SESSION['Condicio'] = $row['Condicio_Fisica'];
-                $_SESSION['Comunicacio'] = $row['Comunicació_comercial'];
+                
+                $_SESSION['DNI'] = $row['DNI'];
+                $_SESSION['nom'] = $row['nom'];
+                $_SESSION['cognom'] = $row['cognom'];
+                $_SESSION['sexe'] = $row['sexe'];
+                $_SESSION['data'] = $row['data_naix'];
+                $_SESSION['telefon'] = $row['telefon'];
+                $_SESSION['correu'] = $row['email'];
+                $_SESSION['usuari'] = $row['usuari'];
+                $_SESSION['contrasenya'] = $row['contrasenya'];
+                $_SESSION['compte_bancari'] = $row['compte_bancari'];
+
                 
             }
-            header("Location: ../php/home.view.php");
+            header("Location: ../view/home.view.php");
         } else {
             $message = 'L\'usuari o contrasenya son incorectes';
         }
     }
     
-        
+}
 
+function registre(){
+
+    if(!empty($_POST['dni']) && !empty($_POST['email']) && !empty($_POST['bancari'])){
+    
+        //Consulta
+        $sql ="insert into clients values('" . $_POST['dni'] . "','" . $_POST['nom'] . "','" . $_POST['cognom'] . "','" . $_POST['sexe'] . "','" . $_POST['data'] . "','" . $_POST['tele'] . "','" . $_POST['email'] . "','" . $_POST['usuari'] . "',MD5(''" . $_POST['contra'] . "''),'" . $_POST['bancari'] . "')";
+         
+        $result = con()->query($sql);
+
+
+
+        header("Location: ../view/login.view.php");
+
+    }
+    
 }
 
 ?>
