@@ -50,41 +50,70 @@ session_start();
     <!-- Main
     ################################################# -->
     <main>
+        <div class="msg">
+            <div class="dreta">
+                <h1>Et donem la benviguda <span><?php echo $_SESSION['nom'] ?></span>!!</h1>
+                <p>Dona un cop d'ull a els nostres cursos i kist destacats entre els nostres clients</p> 
+            </div>
+            <div class="esquerra">
+                <img src="" alt="">
+            </div>
+        </div>
         <div class="linia"></div>
+
         <section>
-            <div class="top">
-                <div class="temps">
-                    <div class="titol">
-                        <h1>Temps </h1>
-                    </div>
-                    <p>A</p>
-                    <p>A</p>
-                </div>
-                <div class="material">
+            <div class="des">
+                <div class="des-main">
                     <div class="titol">
                         <h1>Cursos Populars</h1>
+                        <h1>Cursos Populars</h1>
                     </div>
-                    <div class="productes">
-                        <div class="carta-prod">
-                            <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                            <h1>Prova 1</h1>
-                            <p class="preu">$19.99</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><button>Alquilar</button></p>
+                    <div class="cursos-kits">
+                        <div class="cursos">
+                            <div class="carta-prod">
+                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                                <h1>Prova 1</h1>
+                                <p class="preu">$19.99</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><button>Alquilar</button></p>
+                            </div>
+                            <div class="carta-prod">
+                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                                <h1>Prova 1</h1>
+                                <p class="preu">$19.99</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><button>Alquilar</button></p>
+                            </div>
+                            <div class="carta-prod">
+                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                                <h1>Prova 1</h1>
+                                <p class="preu">$19.99</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><button>Alquilar</button></p>
+                            </div>
                         </div>
-                        <div class="carta-prod">
-                            <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                            <h1>Prova 1</h1>
-                            <p class="preu">$19.99</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><button>Alquilar</button></p>
-                        </div>
-                        <div class="carta-prod">
-                            <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                            <h1>Prova 1</h1>
-                            <p class="preu">$19.99</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><button>Alquilar</button></p>
+                        <div class="kits">
+                            <div class="carta-prod">
+                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                                <h1>Prova 1</h1>
+                                <p class="preu">$19.99</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><button>Alquilar</button></p>
+                            </div>
+                            <div class="carta-prod">
+                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                                <h1>Prova 1</h1>
+                                <p class="preu">$19.99</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><button>Alquilar</button></p>
+                            </div>
+                            <div class="carta-prod">
+                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
+                                <h1>Prova 1</h1>
+                                <p class="preu">$19.99</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><button>Alquilar</button></p>
+                            </div>
                         </div>
                     </div>
                 </div>

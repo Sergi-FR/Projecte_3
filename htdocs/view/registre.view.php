@@ -65,7 +65,13 @@ registre();
                         <div class="genere">
                             <input type="radio" name="sexe" id="dona" value="Femeni">
                             <label for="sexe">Dona</label>
-                        </div>                    
+                        </div>
+                        <div class="genere">
+                            <input type="radio" name="sexe" id="altre" value="altre">
+                            <label for="sexe">Altre: </label>
+                            <input id="altre" type="text" name="sexe">
+                        </div>  
+                         <p> <?php echo $_POST["home"]; ?>                     
                     </div>
                     
                     <div class="esquerra">
@@ -83,7 +89,7 @@ registre();
 
                         <label for="contra">Contrasenya</label>
                         <input id="contra" type="password" name="contra">
-                        <button type="submit">Enviar</button>
+                        <input type="submit" value="Enviar">
                         <p>Ja estas donat d'alta? <a href="login.view.php">Fes Login!!!</a></p>
                     </div>       
                 </div>

@@ -17,7 +17,7 @@ a{
 nav {
     height: 13vh;
 
-    background: url(../img/fondo.jpg) no-repeat ;
+    background-image: linear-gradient(to right,#c5e5ff, #3cb8ff);
 }
 
 nav .menu-main{
@@ -62,39 +62,92 @@ nav .logo img{
 .linia{
     background-color: black;
     height: 1vh;
-
+    margin-bottom: 100px;
 }
 
-section{
+.msg{
+    background-image: linear-gradient(to right,#c5e5ff, #3cb8ff);
+    height: 50vh;
+    display: flex;
+}
+
+
+.dreta{
+    width: 30%;
+    flex-wrap: wrap;
+    
+}
+.dreta h1{
+    margin: 40px;
+    
+}
+.dreta p{
+
+    margin: 40px;
+    
+}
+.esquerra{
+    width: 70%;
+      
+}
+
+.esquerra img{
+    width: 470px;
+    height: 470px;
+}
+
+.msg h1{
+    font-size: 32px;
+    font-style: italic;  
+}
+
+.msg span{
+    color: #fdfdfd;
+    font-size: 40px;
+}
+
+.des{
     display: flex;
     flex-direction: column;
-    
 }
 
-.top{
-    
-    margin: 30px;
-    padding: 10px;
-
+.des-main{
+    background-color: rgba(160, 200, 235 ,0.5);
+    height: 55vh;
 }
-.top{
+
+
+.des-main .titol{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    margin: 0px 55px;
+
+    color: white;
+    padding: 20px;
 }
 
-.productes{
+.cursos-kits{
     display: flex;
-    margin: 20px 0;
+    justify-content: space-evenly;
 }
+.cursos, .kits{
+    background-color: white;
+    display: flex;
+
+    padding: 25px;
+    border-radius: 2px;
+}
+
 
 .carta-prod{
     margin: 0 8px;
-    max-width: 250px;
+    max-width: 200px;
     text-align: center;
 }
 
 .carta-prod img{
-    max-width: 250px;
+    max-width: 200px;
     height: max-content;
 }
 

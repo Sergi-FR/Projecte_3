@@ -55,16 +55,27 @@ function Desar_session(){
 
 function registre(){
 
-    if(!empty($_POST['dni']) && !empty($_POST['email']) && !empty($_POST['bancari'])){
+    if(!isset($_POST)){
     
-        //Consulta
-        $sql ="insert into clients values('" . $_POST['dni'] . "','" . $_POST['nom'] . "','" . $_POST['cognom'] . "','" . $_POST['sexe'] . "','" . $_POST['data'] . "','" . $_POST['tele'] . "','" . $_POST['email'] . "','" . $_POST['usuari'] . "',MD5(''" . $_POST['contra'] . "''),'" . $_POST['bancari'] . "')";
-         
-        $result = con()->query($sql);
+        $dni = $_POST["dni"];
+        $nom = $_POST["nom"];
+        $cognom = $_POST["cognom"];
+        $sexe = $_POST["sexe"];
+        $data = $_POST["data"];
+        $tele = $_POST["tele"];
+        $email = $_POST["email"];
+        $usuari = $_POST["usuari"];
+        $contra = $_POST["contra"];
+        $bancari = $_POST["bancari"];
 
+        $insertar = `INSERT
+        INTO clients (DNI, nom ,cognom , sexe, data_naix, telefon, email, usuari, contrasenya, compte_bancari) 
+        VALUES('${dni}','${nom}','${cognom}','${sexe}','${data}','${tele}','${email}','${usuari}','${contra}','${bancari}');`;
+        
 
+        $result = con()->query($insertar);
 
-        header("Location: ../view/login.view.php");
+        return $result;
 
     }
     
