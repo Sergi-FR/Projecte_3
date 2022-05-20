@@ -2,7 +2,7 @@
 
 include '../php/funcions.php';
 session_start();
-Desar_session();
+
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ Desar_session();
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="../css/home.css">
 
 </head>
 
@@ -32,32 +32,30 @@ Desar_session();
         <div class="menu-main">
             <div class="logo">
                 <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a>
-                <p><span>Ski</span>ling</p>
+                <p><span>Ski</span>link</p>
+            </div>
+
+            <div class="opcions-main">
+                <ul>
+                    <li><a href="#">Temps</a></li>
+                    <li><a href="#">Alquilar</a></li>
+                    <li><a href="perfil.view.php">Perfil</a></li>
+                    <li><a href="../php/tancar.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                </ul>
             </div>
         </div>
     </nav>
-
-    <!-- Main
-    ################################################# -->
     <main>
-        <div class="login">
-            <form action="login.view.php" method="post">
-                <div class="login-content">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" placeholder="exemple@gmail.com">
-                    <label for="contra">Contrasenya</label>
-                    <input type="password" name="contra" id="contra">
-                    <button type="submit" >Enviar</button>
-                    <p>Encara no estas donat d'alta? <a href="registre.view.php">Registrat!!!</a></p>
-                </div>
-            </form>
-        </div>
+        <div class="linia"></div>
+
+        <div class="carta-temps">a</div>
+        <div class="carta-temps">a</div>
+        <div class="carta-temps">a</div>
+        <div class="carta-temps">a</div>
+        <div class="carta-temps">a</div>
+        <div class="carta-temps">a</div>
+
 
     </main>
-
-    <footer>
-
-    </footer>
-</body>
-
-</html>
+        <script src="../js/temps.js"></script>
+    </html>

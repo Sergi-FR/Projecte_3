@@ -46,6 +46,12 @@ nav .logo img{
     height: 8vh;;
 }
 
+.logo p span{
+
+    color: rgb(83, 180, 255);
+
+}
+
 nav .logo p{
    color: white;
 }
@@ -96,7 +102,7 @@ form input{
 }
 
 
-form button{
+form #enviar{
 
     background-color: rgb(160, 200, 235);
     color: white;
@@ -133,4 +139,32 @@ form a{
 footer{
     height: 5vh;
     background-color: black;
+}
+
+@media screen and (max-width: 500px) {
+
+    main{
+        height: 100vh;
+    }
+
+    .login-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{
+        padding: 10px;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    label{
+        font-size: 12px;
+    }
+
+    form input{
+        padding: 2px;
+    }
+
+
 }

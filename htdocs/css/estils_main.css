@@ -19,7 +19,6 @@ nav {
 
     background: url(../img/fondo.jpg) no-repeat ;
 
-
 }
 
 nav .menu-main{
@@ -47,6 +46,69 @@ nav .opcions-main ul li{
 
     background-color: rgba(255, 255, 255, 0.530);
 }
+
+nav .menu-responsive {
+    display: none;
+}
+
+#overlay {
+    display:none;
+    position: absolute;
+    opacity:    0.8; 
+    background: white; 
+    width:      100%;
+    height:     100%; 
+    z-index:    1;
+    top:        0; 
+    left:       0; 
+    position:   fixed; 
+}
+
+
+/* #################################################
+                Overlay telefon
+################################################# */
+
+@media screen and (max-width: 800px){
+
+    nav .opcions-main{
+        display: none;
+
+    }
+
+    nav .menu-responsive {
+        font-size: 30px;
+        display: block;
+    }
+
+    .overlaymenu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+            
+        height:100%; 
+        width:100%; 
+            
+    }
+
+    .overlaymenu li{
+
+        padding: 15px;
+
+        font-size: 25px;
+            
+    }
+
+    .overlaymenu li a{
+
+        border-bottom: 5px solid rgb(83, 180, 255);
+        padding: 0px 20px;
+            
+    }
+
+}
+
 
 nav .logo{
     
@@ -129,9 +191,12 @@ body{
     margin: 0;   
 }
 
+.submenu{
+    background-color: black;
+}
+
 
 .opcions-sub{
-    background-color: black;
     padding: 10px;
 }
 
@@ -267,4 +332,48 @@ footer{
     background-color: black;
     width: 100%;
     height: 2vh;
+}
+
+@media screen and (max-width: 800px) {
+
+    .opcions-sub{
+        visibility: hidden;
+    }
+
+    .sobre-nosaltres{
+        margin: 5px 10px 5px 10px;
+        padding: 10px;
+        border-radius: 8px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        background-color: aliceblue;
+    }
+
+    .con-top{
+        display: none;
+    }
+    .contingut{
+
+
+    }
+    .con-bot{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .con-bot .info {
+        width: 50%;
+    }
+    #img-petita{
+        width: 22vh;
+        height: 25vh;
+
+        box-shadow: none;
+    }
+        
 }

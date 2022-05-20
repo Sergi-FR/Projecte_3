@@ -46,29 +46,6 @@ nav .opcions-main ul li{
     background-color: rgba(255, 255, 255, 0.530);
 }
 
-nav .menu-responsive {
-    display: none;
-}
-
-/* #################################################
-                Overlay telefon
-################################################# */
-
-@media screen and (max-width: 800px){
-
-    nav .opcions-main{
-        display: none;
-
-    }
-
-    nav .menu-responsive {
-
-        font-size: 30px;
-        display: block;
-    }
-    
-}
-
 nav .logo{
     
     display: flex;
@@ -85,83 +62,55 @@ nav .logo img{
 .linia{
     background-color: black;
     height: 1vh;
-    margin-bottom: 100px;
 }
 
-.msg{
-    background-image: linear-gradient(to right,#c5e5ff, #3cb8ff);
-    height: 50vh;
+.filtre_mat{
+    margin: 50px 120px;
+}
+
+.filtre_mat form{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-.dreta{
-    width: 30%;
-    flex-wrap: wrap;
-    
-}
-.dreta h1{
-    margin: 40px;
-    
-}
-.dreta p{
-
-    margin: 40px;
-    
-}
-.esquerra{
-    width: 70%;
-      
-}
-
-.esquerra img{
-    width: 470px;
-    height: 470px;
-}
-
-.msg h1{
-    font-size: 32px;
-    font-style: italic;  
-}
-
-.msg span{
-    color: #fdfdfd;
-    font-size: 40px;
-}
-
-.des{
-    display: flex;
-    flex-direction: column;
-}
-
-.des-main{
-    background-color: rgba(160, 200, 235 ,0.5);
-    height: 55vh;
-}
-
-
-.des-main .titol{
-    display: flex;
-    justify-content: space-around;
-
-    margin: 0px 55px;
-
+.filtre_mat input{
+    background-color: rgb(160, 200, 235);
     color: white;
-    padding: 20px;
+
+    border: none;
+
+    padding: 10px;
+    margin: 0px 10px;
+    font-size: 18px;
+    font-style: oblique;
 }
 
-.cursos-kits{
-    display: flex;
-    justify-content: space-evenly;
+.filtre_mat #buscar{
+    width: 400px;
 }
-.cursos, .kits{
+
+#titol{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 0px 120px;
+}
+#titol th{
+    padding-right: 20px;
+    font-size: 40px;
+    border-bottom: 8px solid #3cb8ff;
+}
+
+.materials{
     background-color: white;
     display: flex;
 
-    padding: 10px;
+    padding: 20px;
+    margin: 20px;
     border-radius: 2px;
 }
-
 
 .carta-prod{
     margin: 0 8px;
@@ -170,9 +119,14 @@ nav .logo img{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+
 .carta-prod img{
     max-width: 200px;
     height: max-content;
+}
+
+.carta-prod h1{
+    font-size: 15px;
 }
 
 .carta-prod button {
@@ -192,26 +146,11 @@ nav .logo img{
     font-size: 22px;
 }
 
-.material{
-    margin: 5px 0px 5px -120px;
-    font-size: 14px;
+.taula #info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.caract-prod{
-    color: grey;
-    font-size: 10px;
-}
-
-.content{
-    display: none;
-}
-
-@media screen and (max-width: 800px) {
-
-    .msg{
-        display:none;
-        
-    }
-
-}
 

@@ -50,6 +50,12 @@ nav .logo p{
    color: white;
 }
 
+.logo p span{
+
+    color: rgb(83, 180, 255);
+
+}
+
 main{
     height: 80vh;
 

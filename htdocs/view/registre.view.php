@@ -32,7 +32,7 @@ registre();
         <div class="menu-main">
             <div class="logo">
                 <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a>
-                <p>Marca</p>
+                <p><span>Sky</span>ling</p>
             </div>
         </div>
     </nav>
@@ -41,7 +41,7 @@ registre();
     ################################################# -->
     <main>
         <div class="login">
-            <form action="registre.view.php" method="post">
+            <form action="" method="post">
                 <div class="login-content">
                     <div class="dreta">
                         <label for="dni">DNI</label>
@@ -65,13 +65,7 @@ registre();
                         <div class="genere">
                             <input type="radio" name="sexe" id="dona" value="Femeni">
                             <label for="sexe">Dona</label>
-                        </div>
-                        <div class="genere">
-                            <input type="radio" name="sexe" id="altre" value="altre">
-                            <label for="sexe">Altre: </label>
-                            <input id="altre" type="text" name="sexe">
-                        </div>  
-                         <p> <?php echo $_POST["home"]; ?>                     
+                        </div>                   
                     </div>
                     
                     <div class="esquerra">
@@ -89,7 +83,7 @@ registre();
 
                         <label for="contra">Contrasenya</label>
                         <input id="contra" type="password" name="contra">
-                        <input type="submit" value="Enviar">
+                        <input id="enviar" type="submit" value="Enviar">
                         <p>Ja estas donat d'alta? <a href="login.view.php">Fes Login!!!</a></p>
                     </div>       
                 </div>

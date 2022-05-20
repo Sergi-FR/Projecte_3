@@ -37,12 +37,14 @@ session_start();
 
             <div class="opcions-main">
                 <ul>
-                    <li><a href="#">Temps</a></li>
-                    <li><a href="#">Alquilar</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Perfil</a></li>
+                    <li><a href="temps.view.php">Temps</a></li>
+                    <li><a href="alquilar.view.php">Alquilar</a></li>
+                    <li><a href="perfil.view.php">Perfil</a></li>
                     <li><a href="../php/tancar.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </ul>
+            </div>
+            <div class="menu-responsive">
+                <a href=""><i class="fa-solid fa-bars"></i></a>
             </div>
         </div>
     </nav>
@@ -53,7 +55,7 @@ session_start();
         <div class="msg">
             <div class="dreta">
                 <h1>Et donem la benviguda <span><?php echo $_SESSION['nom'] ?></span>!!</h1>
-                <p>Dona un cop d'ull a els nostres cursos i kist destacats entre els nostres clients</p> 
+                <p>Dona un cop d'ull als nostres cursos i kits destacats entre els nostres clients</p> 
             </div>
             <div class="esquerra">
                 <img src="" alt="">
@@ -65,64 +67,53 @@ session_start();
             <div class="des">
                 <div class="des-main">
                     <div class="titol">
-                        <h1>Cursos Populars</h1>
-                        <h1>Cursos Populars</h1>
+                        <h1>Kits Populars</h1>
                     </div>
                     <div class="cursos-kits">
+                    <?php $result= obtenirKitsPOP();
+                    while($row = $result->fetch_assoc()){
+                    ?>
                         <div class="cursos">
                             <div class="carta-prod">
                                 <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                                <h1>Prova 1</h1>
-                                <p class="preu">$19.99</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p><button>Alquilar</button></p>
-                            </div>
-                            <div class="carta-prod">
-                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                                <h1>Prova 1</h1>
-                                <p class="preu">$19.99</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p><button>Alquilar</button></p>
-                            </div>
-                            <div class="carta-prod">
-                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                                <h1>Prova 1</h1>
-                                <p class="preu">$19.99</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p><button>Alquilar</button></p>
-                            </div>
-                        </div>
-                        <div class="kits">
-                            <div class="carta-prod">
-                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                                <h1>Prova 1</h1>
-                                <p class="preu">$19.99</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p><button>Alquilar</button></p>
-                            </div>
-                            <div class="carta-prod">
-                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                                <h1>Prova 1</h1>
-                                <p class="preu">$19.99</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p><button>Alquilar</button></p>
-                            </div>
-                            <div class="carta-prod">
-                                <img src="../img/img-mig.jpg" alt="Imatge Producte">
-                                <h1>Prova 1</h1>
-                                <p class="preu">$19.99</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h1>Kit <?php echo $row['ID'] ?></h1>
+                                <p class="preu"><?php echo $row['preu'] ?>.-€</p>
+                                <button type="button" class="btnmostrar">Més Informació</button>
+                                <div class="content">
+                                    <p>El Kit esta fromat per:</p>
+                                    <ul>
+                                        <li class="material">Botes</li>
+                                            <ul class="caract-prod">
+                                                <li>Marca: <?php echo $row['marca'] ?></li>
+                                                <li>Model: <?php echo $row['model'] ?></li>
+                                                <li>Alçada: <?php echo $row['talla'] ?></li>
+                                            </ul>
+                                        <li class="material">Esquis</li>
+                                            <ul class="caract-prod">
+                                                <li>Marca: <?php echo $row['marca'] ?></li>
+                                                <li>Model: <?php echo $row['model'] ?></li>
+                                                <li>Alçada: <?php echo $row['llargada'] ?></li>
+                                            </ul>
+                                        <li class="material">Pals</li>
+                                            <ul class="caract-prod">
+                                                <li>Marca: <?php echo $row['marca'] ?></li>
+                                                <li>Model: <?php echo $row['model'] ?></li>
+                                                <li>Alçada: <?php echo $row['alçada'] ?></li>
+                                            </ul>
+                                    </ul>
+                                </div>
                                 <p><button>Alquilar</button></p>
                             </div>
                         </div>
+                    <?php } ?>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer>
     </footer>
+    <script src="../js/desplegarinfo.js"></script>
 </body>
 
 </html>
