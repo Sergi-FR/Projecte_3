@@ -48,137 +48,112 @@ session_start();
     <main>
         <div class="fromulari_perfil">
             <form action="" method="post">
-                <div class="contenidor-perfil">
-                    <div class="botons">
-                        <button>Info</button>
-                        <button>Historial Material</button>
-                        <button>Historial Cursos</button>
-                    </div>               
+                <div class="contenidor-perfil">             
                     <div class="perfil">
                         <div class="dreta">
                             <label for="dni">DNI</label>
-                            <input id="dni" type="text" name="dni">
+                            <input id="dni" type="text" name="dni" value="<?php echo $_SESSION['DNI']?>" disabled>
 
                             <label for="nom">Nom</label>
-                            <input id="nom" type="text" name="nom">
+                            <input id="nom" type="text" name="nom" value="<?php echo $_SESSION['nom']?>" disabled>
 
                             <label for="cognom">Cognom</label>
-                            <input id="cognom" type="text" name="cognom">
+                            <input id="cognom" type="text" name="cognom" value="<?php echo $_SESSION['cognom']?>" disabled>
 
                             <label for="data">Data Naixement</label>
-                            <input id="data" type="text" name="data" placeholder="YYYY-MM-DD">
+                            <input id="data" type="text" name="data" placeholder="YYYY-MM-DD" value="<?php echo $_SESSION['data']?>" disabled>
 
                             <label for="sexe">Genere</label>
 
                             <div class="genere">
-                                <input type="radio" name="sexe" id="home" value="Masculi" >
-                                <label for="sexe">Home</label> 
-                            </div>
-                            <div class="genere">
-                                <input type="radio" name="sexe" id="dona" value="Femeni">
-                                <label for="sexe">Dona</label>
-                            </div>                   
-                        </div>
-                        
+                                <input type="text" name="sexe" id="home" placeholder="Masculi/Femeni" value="<?php echo $_SESSION['sexe']?>" disabled >
+                            </div>                
+                        </div>                 
                         <div class="esquerra">
                             <label for="email">Email</label>
-                            <input id="email" type="email" name="email" placeholder="exemple@gmail.com">
+                            <input id="email" type="email" name="email" placeholder="exemple@gmail.com" value="<?php echo $_SESSION['correu']?>">
 
                             <label for="tele">Telefon</label>
-                            <input id="tele" type="text" name="tele">
+                            <input id="tele" type="text" name="tele" value="<?php echo $_SESSION['telefon']?>">
 
                             <label for="bancari">Compte Bancari</label>
-                            <input id="bancari" type="text" name="bancari" >
+                            <input id="bancari" type="text" name="bancari" value="<?php echo $_SESSION['compte_bancari']?>">
 
                             <label for="usuari">Usuari</label>
-                            <input id="usuari" type="text" name="usuari">
-
+                            <input id="usuari" type="text" name="usuari" value="<?php echo $_SESSION['usuari']?>">
                             <input id="desar" type="submit" value="Desar">
                         </div> 
-                    </div> 
-                    <div id="perfil2">
-                        <div class="dreta">
-                            <label for="dni">DNI</label>
-                            <input id="dni" type="text" name="dni">
 
-                            <label for="nom">Nom</label>
-                            <input id="nom" type="text" name="nom">
+                    
+                        <div class="ind">
+                            <h4>Historial Individual</h4>
 
-                            <label for="cognom">Cognom</label>
-                            <input id="cognom" type="text" name="cognom">
-
-                            <label for="data">Data Naixement</label>
-                            <input id="data" type="text" name="data" placeholder="YYYY-MM-DD">
-
-                            <label for="sexe">Genere</label>
-
-                            <div class="genere">
-                                <input type="radio" name="sexe" id="home" value="Masculi" >
-                                <label for="sexe">Home</label> 
+                            <div class="historial">
+                            <?php $result= historialCursosInd();
+                                while($row = $result->fetch_assoc()){
+                                ?>
+                                    <p><?php echo $row["nom"] ?>
+                                    <?php echo $row["preu_client"]?>€
+                                    <?php echo $row["ID_curs"] ?></p>          
+                            <?php } ?>
                             </div>
-                            <div class="genere">
-                                <input type="radio" name="sexe" id="dona" value="Femeni">
-                                <label for="sexe">Dona</label>
-                            </div>                   
                         </div>
-                        
-                        <div class="esquerra">
-                            <label for="email">Email</label>
-                            <input id="email" type="email" name="email" placeholder="exemple@gmail.com">
 
-                            <label for="tele">Telefon</label>
-                            <input id="tele" type="text" name="tele">
+                        <div class="col">
+                            <h4>Historial Colectiu</h4>
 
-                            <label for="bancari">Compte Bancari</label>
-                            <input id="bancari" type="text" name="bancari" >
+                            <div class="historial">
+                            <?php $result= historialCursosCol();
+                                while($row = $result->fetch_assoc()){
+                                ?>
+                                    <p>Data: <?php echo $row["data_curs"]?>
+                                    <?php echo $row["nom"]?>             
+                                    <?php echo $row["preu_final"]?>€</p>
+                            <?php } ?>
+                            </div>
+                        </div>
 
-                            <label for="usuari">Usuari</label>
-                            <input id="usuari" type="text" name="usuari">
+                        <div class="comp">
+                            <h4>Historial Competició</h4>
 
-                            <input id="desar" type="submit" value="Desar">
-                        </div> 
+                            <div class="historial">
+                                <?php $result= historialCursosComp();
+                                    while($row = $result->fetch_assoc()){
+                                    ?>
+                                        <p>Data: <?php echo $row["data_curs"]?>
+                                        <?php echo $row["nom"] ?>
+                                        <?php echo $row["nivell_curs"] ?>
+                                        </p>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="material">
+                            <h4>Historial Material</h4>
+
+                            <div class="historial">
+                                <?php $result= historialCursosComp();
+                                    while($row = $result->fetch_assoc()){
+                                    ?>
+                                        <p><?php echo $row["nom"]?>
+                                        <?php echo $row["marca"]?>
+                                        <?php echo $row["model"]?>
+                                        <?php echo $row["preu"]?></p>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+ 
                     </div> 
                     <div id="perfil3">
-                        <div class="dreta">
-                            <label for="dni">DNI</label>
-                            <input id="dni" type="text" name="dni">
-
-                            <label for="nom">Nom</label>
-                            <input id="nom" type="text" name="nom">
-
-                            <label for="cognom">Cognom</label>
-                            <input id="cognom" type="text" name="cognom">
-
-                            <label for="data">Data Naixement</label>
-                            <input id="data" type="text" name="data" placeholder="YYYY-MM-DD">
-
-                            <label for="sexe">Genere</label>
-
-                            <div class="genere">
-                                <input type="radio" name="sexe" id="home" value="Masculi" >
-                                <label for="sexe">Home</label> 
-                            </div>
-                            <div class="genere">
-                                <input type="radio" name="sexe" id="dona" value="Femeni">
-                                <label for="sexe">Dona</label>
-                            </div>                   
-                        </div>
-                        
-                        <div class="esquerra">
-                            <label for="email">Email</label>
-                            <input id="email" type="email" name="email" placeholder="exemple@gmail.com">
-
-                            <label for="tele">Telefon</label>
-                            <input id="tele" type="text" name="tele">
-
-                            <label for="bancari">Compte Bancari</label>
-                            <input id="bancari" type="text" name="bancari" >
-
-                            <label for="usuari">Usuari</label>
-                            <input id="usuari" type="text" name="usuari">
-
-                            <input id="desar" type="submit" value="Desar">
-                        </div> 
+                        <?php $result= historialMaterial();
+                            while($row = $result->fetch_assoc()){
+                            ?>
+                                <p><?php echo $row["data"]?>
+                                <?php echo $row["nom"]?>
+                                <?php echo $row["marca"]?>
+                                <?php echo $row["model"]?>
+                                <?php echo $row["preu"]?></p>
+                        <?php } ?>
                     </div>      
                 </div>
             </form>

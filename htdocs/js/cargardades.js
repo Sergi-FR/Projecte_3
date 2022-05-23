@@ -17,7 +17,7 @@ function cargardades(){
 
             if(producte.quantitat=producte.quantitat){
 
-                producte.id = e.target.parentElement.querySelector('.id').value;
+                producte.id = e.target.parentElement.querySelector('.id').id;
                 producte.model = e.target.parentElement.querySelector('.model').innerHTML;
                 producte.imatge = e.target.parentElement.querySelector('.img').src;
                 producte.preu = e.target.parentElement.querySelector('.preu').innerHTML;

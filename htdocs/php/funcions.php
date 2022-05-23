@@ -114,4 +114,61 @@ function obtenirProductes(){
     return $result;
 
 }
+
+function historialCursosInd(){
+
+    $sql="SELECT C.DNI, C.nom, I.ID_curs, I.preu_client
+    from clients C, llogar_individual I
+    where C.DNI='".$_SESSION['DNI']."' and
+    C.DNI = I.DNI_client";        
+
+    $result = con()->query($sql);
+
+    return $result;
+
+}
+
+function historialCursosCol(){
+
+    $sql="SELECT C.DNI, C.nom, CO.ID_curs, CO.preu_final, CO.data_curs
+    from clients C, llogar_colectiu CO
+    where C.DNI ='".$_SESSION['DNI']."' and
+    C.DNI = CO.DNI_client";
+    
+    $result = con()->query($sql);
+
+    return $result;
+
+}
+
+function historialCursosComp(){
+
+    $sql="SELECT C.DNI, C.nom, COM.ID_curs, COMP.nivell_curs,COM.data_curs
+    from clients C, federat F, competeix COM, competicio COMP
+    where F.dni_federat='".$_SESSION['DNI']."' and
+    C.DNI = F.dni_federat and
+    F.dni_federat = COM.DNI_federat and
+    COM.ID_curs = COMP.ID_comp";
+
+           
+
+    $result = con()->query($sql);
+
+    return $result;
+
+}
+
+function historialMaterial(){
+
+    $sql="SELECT *
+    from clients c1, materials m1, llogar l1
+    where c1.DNI= l1.dni_client and
+    m1.ID=l1.id_material and
+    c1.DNI ='".$_SESSION['DNI']."'";        
+
+    $result = con()->query($sql);
+
+    return $result;
+
+}
 ?>

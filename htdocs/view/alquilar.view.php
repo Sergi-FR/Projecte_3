@@ -79,7 +79,7 @@ session_start();
                                     <img class="img" src="../img/img-mig.jpg" alt="Imatge Producte">
                                     <h1 class="model"><?php echo $row['model'] ?></h1>
                                     <p class="preu"><?php echo $row['preu'] ?>.-€</p>
-                                    <input class="id" type="button" value="<?php echo $row['ID'] ?>">
+                                    <input class="id" type="button" value="Comprar" id="<?php echo $row['ID'] ?>">
                                 </div>
                             </div>
                         <?php } ?>

@@ -132,7 +132,28 @@ form #desar{
     border: none;
 
     padding: 5px;
+    margin-top: 30px;
     font-size: 18px;
     font-style: oblique;
 
+}
+
+.ind , .col, .comp{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 18%;
+
+    padding: 20px;
+    
+}
+
+.historial p{
+
+    background-color: aliceblue;
+    
+
+    padding: 8px;
+    border-radius: 8px;
 }
