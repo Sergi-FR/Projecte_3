@@ -37,14 +37,24 @@ session_start();
 
             <div class="opcions-main">
                 <ul>
-                    <li><a href="temps.view.php">Temps</a></li>
                     <li><a href="alquilar.view.php">Alquilar</a></li>
+                    <li><a href="carrito.view.php">Carrito</a></li>
                     <li><a href="perfil.view.php">Perfil</a></li>
                     <li><a href="../php/tancar.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </ul>
             </div>
             <div class="menu-responsive">
-                <a href=""><i class="fa-solid fa-bars"></i></a>
+                <a href="" class="btnoverlay" onclick="display()"><i class="fa-solid fa-bars"></i></a>
+            </div>
+            <div id="overlay">
+                <div class="overlaymenu">
+                    <ul>
+                        <li><a href="alquilar.view.php">Alquilar</a></li>
+                        <li><a href="carrito.view.php">Carrito</a></li>
+                        <li><a href="perfil.view.php">Perfil</a></li>
+                        <li><a href="../php/tancar.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>

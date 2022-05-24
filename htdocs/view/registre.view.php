@@ -32,7 +32,7 @@ registre();
         <div class="menu-main">
             <div class="logo">
                 <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a>
-                <p><span>Sky</span>ling</p>
+                <p><span>Ski</span>ling</p>
             </div>
         </div>
     </nav>

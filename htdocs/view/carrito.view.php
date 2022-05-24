@@ -36,7 +36,6 @@ session_start();
 
             <div class="opcions-main">
                 <ul>
-                    <li><a href="temps.view.php">Temps</a></li>
                     <li><a href="alquilar.view.php">Alquilar</a></li>
                     <li><a href="perfil.view.php">Perfil</a></li>
                     <li><a href="../php/tancar.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
@@ -52,22 +51,25 @@ session_start();
     ################################################# -->
     <main>
         <div class="linia"></div>
+
+        <div class="filtrar">
+            <input type="button" value="Buidar Carrito" onclick="esborrarCarrito()">
+        </div>
+
         <div id="taula_carrito">
             <table>
-                <tr id="capçeleraprod">
+                <tr class="capçeleraprod">
                     <th>Producte</th>
                     <th>Quantitat</th>
                     <th>Preu/Unitat</th>
                     <th>Preu Total</th>
                 </tr>
-                <tr>
-                    <div id="carrito">
-
-                    </div>
-                </tr>
             </table>
+            <div id="carrito">
+
+            </div>
         </div>
-        <input type="button" value="Eliminar" onclick="esborrarCarrito()">
+
     </main>
     
     <script src="../js/cargardades.js"></script>

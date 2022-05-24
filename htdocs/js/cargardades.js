@@ -62,18 +62,16 @@ function mostrarinfo(){
 
         let totalLinia = quantitatLinia * preuLinia;
 
-        document.getElementById("carrito").innerHTML += `<tr>
-                                                        </div class="producte">
-                                                            <div>
+        document.getElementById("carrito").innerHTML += `<div class="producte">
+                                                            <div class="prod-imgmod">
                                                                 <img class="imgprod" src="${arrayProductes.imatge}" alt="producte">
                                                                 <h3>Model: ${arrayProductes.model}</h3>
                                                             </div>
                                                             <p>${arrayProductes.quantitat}</p>
                                                             <p>${arrayProductes.preu}</p>
                                                             <p>${totalLinia}</p>
-                                                            <input type="button" value="Eliminar" onclick="esborrarRegistre(${arrayProductes.id})">
-                                                        </div>
-                                                        </tr>`;
+                                                            <input id="eliminarprod" type="button" value="X" onclick="esborrarRegistre(${arrayProductes.id})">
+                                                        </div>`;
 
                                                                 
     }

@@ -37,7 +37,6 @@ session_start();
 
             <div class="opcions-main">
                 <ul>
-                    <li><a href="temps.view.php">Temps</a></li>
                     <li><a href="alquilar.view.php">Alquilar</a></li>
                     <li><a href="carrito.view.php">Carrito</a></li>
                     <li><a href="perfil.view.php">Perfil</a></li>

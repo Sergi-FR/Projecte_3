@@ -86,7 +86,68 @@ nav .logo img{
     height: 1vh;
 }
 
+.filtrar{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.filtrar input{
+
+    background-color: rgb(160, 200, 235);
+    color: white;
+
+    border: none;
+
+    margin: 30px 30px;
+
+    padding: 10px;
+    font-size: 20px;
+    font-style: oblique;
+
+
+}
+
+.producte{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.producte{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.producte #eliminarprod{
+
+    background-color: #333;
+    color: white;
+
+    border: none;
+
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.prod-imgmod{
+    display: flex;
+    flex-direction: column;
+}
+
 .imgprod{
     width: 150px;
     height: 150px;
+}
+
+
+table tr th{
+    padding-left: 200px;
+
+    font-size: 25px;
+
 }
