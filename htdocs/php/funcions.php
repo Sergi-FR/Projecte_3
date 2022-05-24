@@ -3,7 +3,7 @@
 function con(){
     
     //Connexio a la BD
-    $connexio = new mysqli("localhost", "root", "1234", "esqui");
+    $connexio = new mysqli("localhost", "root", "mySQL", "esqui");
 
     //Comprovasio de la connexio
     if($connexio->connect_errno){

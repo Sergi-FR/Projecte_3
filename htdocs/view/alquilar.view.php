@@ -75,7 +75,7 @@ session_start();
                         ?>
                             <div class="materials">
                                 <div class="carta-prod">
-                                    <img class="img" src="../img/img-mig.jpg" alt="Imatge Producte">
+                                    <img class="img" src="<?php echo $row['imatge'] ?>" alt="Imatge Producte">
                                     <h1 class="model"><?php echo $row['model'] ?></h1>
                                     <p class="preu"><?php echo $row['preu'] ?>.-€</p>
                                     <input class="id" type="button" value="Comprar" id="<?php echo $row['ID'] ?>">

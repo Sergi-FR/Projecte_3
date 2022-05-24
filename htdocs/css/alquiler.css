@@ -114,15 +114,15 @@ nav .logo img{
 
 .carta-prod{
     margin: 0 8px;
-    max-width: 200px;
+    max-width: 400px;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 
 .carta-prod img{
-    max-width: 200px;
-    height: max-content;
+    width: 400px;
+    height: 500px;
 }
 
 .carta-prod h1{

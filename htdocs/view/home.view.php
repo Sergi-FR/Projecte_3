@@ -90,7 +90,7 @@ session_start();
                                 <p class="preu"><?php echo $row['preu'] ?>.-€</p>
                                 <button type="button" class="btnmostrar">Més Informació</button>
                                 <div class="content">
-                                    <p>El Kit esta fromat per:</p>
+                                    <p>El Kit esta format per:</p>
                                     <ul>
                                         <li class="material">Botes</li>
                                             <ul class="caract-prod">
