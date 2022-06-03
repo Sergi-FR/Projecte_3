@@ -601,6 +601,8 @@ public class SkilinkApp extends Application {
         txtmonitor.setText("");
         txtaforament.setText("");
         txtdata.setText("");
+        txthorainiciInd.setText("");
+        txtduracio.setText("");
         txthorainiciCol.setText("");
         txthorafinalCol.setText("");
         txthorainiciComp.setText("");
